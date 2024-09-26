@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Fanta Dynamique</title>
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FF6A00; /* Orange vif de Fanta */
+            color: #000000; /* Couleur du texte */
+            text-align: center;
+            overflow: hidden; /* Masquer les bulles lorsqu'elles sortent de l'écran */
+            position: relative;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 3em;
+            color: #ffdf2a; /* Bleu pour le titre */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        form {
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 500px;
+            background-color: #ffffff; /* Fond blanc pour le formulaire */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2; /* Mettre le formulaire devant les bulles */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #FF6A00; /* Orange pour les labels */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #FF6A00; /* Bordure orange */
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            background-color: #ffcd2a; /* Bleu pour le bouton */
+            color: #ff0000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ffd560; /* Couleur au survol */
+        }
+
+        .home-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #FF6A00; /* Orange pour le bouton d'accueil */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #E65900; /* Couleur au survol */
+        }
+
+        /* Animation des bulles */
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: rise 10s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes rise {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Générer des bulles dynamiques */
+        .bubble:nth-child(1) {
+            left: 5%;
+            width: 50px;
+            height: 50px;
+            animation-duration: 10s;
+            animation-delay: 0s;
+        }
+
+        .bubble:nth-child(2) {
+            left: 20%;
+            width: 30px;
+            height: 30px;
+            animation-duration: 8s;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(3) {
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            animation-duration: 12s;
+            animation-delay: 4s;
+        }
+
+        .bubble:nth-child(4) {
+            left: 60%;
+            width: 40px;
+            height: 40px;
+            animation-duration: 9s;
+            animation-delay: 1s;
+        }
+
+        .bubble:nth-child(5) {
+            left: 80%;
+            width: 20px;
+            height: 20px;
+            animation-duration: 11s;
+            animation-delay: 3s;
+        }
+
+        /* Ajouter d'autres bulles */
+        /* Modifier les valeurs de left, width, height, animation-duration et animation-delay pour chaque bulle */
+    </style>
+</head>
+<body>
+
+    <h1>Contactez-nous</h1>
+
+    <form action="/submit_form" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required><br>
+
+        <label for="email">E-mail :</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5" cols="30" required></textarea><br>
+
+        <div class="btn-container">
+            <input type="submit" value="Envoyer">
+        </div>
+    </form>
+
+    <a href="index.html" class="home-button">Retour à l'accueil</a>
+
+    <!-- Conteneur pour les bulles -->
+    <div id="bubbles-container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <script>
+        // Fonction pour générer plusieurs bulles
+        function generateBubbles(numBubbles) {
+            const container = document.getElementById('bubbles-container');
+            for (let i = 0; i < numBubbles; i++) {
+                let bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+
+                // Définir des tailles aléatoires pour les bulles
+                let size = Math.random() * 50 + 20; // Entre 20px et 70px
+                bubble.style.width = size + 'px';
+                bubble.style.height = size + 'px';
+
+                // Position aléatoire sur l'écran
+                bubble.style.left = Math.random() * 100 + '%';
+
+                // Durée d'animation aléatoire
+                bubble.style.animationDuration = Math.random() * 5 + 8 + 's'; // Entre 8s et 13s
+                bubble.style.animationDelay = Math.random() * 5 + 's'; // Entre 0s et 5s
+
+                container.appendChild(bubble);
+            }
+        }
+
+        // Générer 100 bulles
+        generateBubbles(100);
+    </script>
+    <footer>
+        <p>&copy;Coca-Cola. 2024 BTS SIO. Tous droits réservé.</s></p>
+    </footer>
+</body>
+</html>

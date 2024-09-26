@@ -1,0 +1,122 @@
+/* Body Styling */
+body {
+    background-color: black; /* Fond noir simple */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Title Styling */
+h2 {
+    font-size: 3em;
+    color: yellow; /* Couleur jaune pour le titre */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid yellow;
+    padding-bottom: 10px;
+    animation: fadeInTitle 1.2s ease-in;
+}
+
+/* Animation d'apparition du titre */
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Table Styling */
+table {
+    width: 66%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 0, 0.1); /* Fond léger transparent jaune */
+    border-collapse: collapse;
+}
+
+td {
+    padding: 15px;
+    color: yellow;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+/* Input Fields Styling */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: 90%;
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid yellow;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+    border-color: yellow;
+    background-color: rgba(255, 255, 0, 0.2); /* Fond jaune clair au focus */
+}
+
+/* Button Styling */
+input[type="submit"],
+input[type="reset"] {
+    background-color: yellow;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: black;
+    color: yellow;
+    border: 2px solid yellow;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px yellow;
+}
+
+/* Adjustement des labels */
+label {
+    color: yellow;
+    font-weight: bold;
+}
+
+/* Animations de transition pour les éléments */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px yellow;
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 15px yellow;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px yellow;
+    }
+}
+
+/* Application de l'animation */
+input[type="submit"],
+input[type="reset"] {
+    animation: pulse 2s infinite;
+}

@@ -1,0 +1,17 @@
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #657cfd; /* Couleur de fond du bouton */
+    color: #000000; /* Couleur du texte */
+    text-decoration: none; /* Enlever la décoration du lien */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 16px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Centrer le texte */
+    transition: background-color 0.3s ease; /* Effet de transition pour le survol */
+}
+
+.home-button:hover {
+    background-color: #001aff; /* Couleur de fond au survol */
+}

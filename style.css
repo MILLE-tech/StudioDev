@@ -1,9 +1,8 @@
 /* Body Styling */
 body {
-    background: linear-gradient(45deg, black, red), url('nature-3082832_640.jpg');
+    background: url('nature-3082832_640.jpg');
     background-size: cover; /* L'image couvre tout l'écran */
     background-position: center; /* Centre l'image */
-    background-blend-mode: multiply; /* Mélange le dégradé et l'image */
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
@@ -14,6 +13,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 
 
 

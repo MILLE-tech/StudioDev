@@ -24,6 +24,16 @@ h1 {
     animation: glow 1.5s infinite alternate;
 }
 
+h2 {
+    font-size: 1.5em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    animation: glow 1.5s infinite alternate;
+}
+
 
 @keyframes glow {
     0% {

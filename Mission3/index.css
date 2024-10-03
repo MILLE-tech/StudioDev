@@ -1,27 +1,89 @@
-/* styles.css */
+/* Reset des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Couleur de fond */
-    margin: 0; /* Supprimer les marges par défaut */
-    padding: 20px; /* Ajout de padding autour du contenu */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8f9fa, #dee2e6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    padding: 20px;
 }
 
+/* Conteneur central pour centrer le contenu */
+.container {
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Styles du titre */
 h1 {
-    color: #333; /* Couleur du texte du titre */
-    text-align: center; /* Centrer le titre */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 2s ease-in-out;
 }
 
+/* Effet sur les liens */
 a {
-    color: #007BFF; /* Couleur des liens */
-    text-decoration: none; /* Supprimer le soulignement */
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
 }
 
+/* Animation au survol */
 a:hover {
-    text-decoration: underline; /* Souligner les liens au survol */
+    background-color: #0056b3;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
 }
 
+/* Paragraphe pour le lien de retour */
 p {
-    text-align: center; /* Centrer le paragraphe */
-    margin-top: 20px; /* Ajouter un espacement au-dessus du paragraphe */
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    a {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Animation d'apparition du titre */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

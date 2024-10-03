@@ -23,7 +23,7 @@ h1 {
     color: white;
     text-transform: uppercase;
     letter-spacing: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     position: relative;
     animation: glow 1.5s infinite alternate;
 }

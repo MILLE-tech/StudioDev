@@ -7,17 +7,66 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <H1>Caron Arsène</H1>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="Mission 1/index.html">Mission 1</a>
+        <a href="Mission 2/index.html">Mission 2</a>
+        <a href="Mission 3/index.html">Mission 3</a>
+        <a href="TP 1/index.html">TP 1</a>
+        <a href="TP 2/index.html">TP 2</a>
+        <a href="TP 3/index.html">TP 3</a>
+    </nav>
+
+    <h1>Caron Arsène</h1>
     <h2>Porte-folio:</h2>
-    
-    <a href="Mission 1/index.html">Mission 1</a><br>
-    <a href="Mission2/index.html">Mission 2</a><br>
-    <a href="TP 1/index.html">TP 1</a><br>
-    <a href="tp2/index.html">TP 2</a><br>
-    <a href="tp3/index.html">TP 3</a><br>
-    <a href="Mission3/index.html">Mission 3</a>
+
+    <!-- Carrousel d'images -->
+    <div class="carousel">
+        <img src="image1.jpg" class="active" alt="Image 1 - Développement web">
+        <img src="image2.jpg" alt="Image 2 - Développement web">
+        <img src="image3.jpg" alt="Image 3 - Développement web">
+    </div>
+
+    <!-- Formulaire de satisfaction -->
+    <section id="feedback-form">
+        <h2>Donnez votre avis</h2>
+        <form>
+            <label for="first-name">Prénom:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Nom:</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="comments">Commentaire:</label>
+            <textarea id="comments" name="comments"></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
     <footer>
         &copy;Arsène Caron. Tous droits réservés.
     </footer>
+
+    <script>
+        // Script pour le carrousel
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const totalImages = images.length;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextImage, 3000); // Change d'image toutes les 3 secondes
+    </script>
+
 </body>
 </html>
+

@@ -1,9 +1,9 @@
 /* Body Styling */
 body {
     background: linear-gradient(45deg, black, red), url('nature-3082832_640.jpg');
-    background-size: cover; /* L'image couvre tout l'écran */
-    background-position: center; /* Centre l'image */
-    background-blend-mode: multiply; /* Mélange le dégradé et l'image */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
@@ -11,33 +11,27 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
-
-
 /* Title Styling */
-h1 {
-    font-size: 3em;
-    color: white;
+h1, h2 {
     text-transform: uppercase;
     letter-spacing: 5px;
-    margin-bottom: 15px;
     position: relative;
     animation: glow 1.5s infinite alternate;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 3em;
 }
 
 h2 {
     font-size: 2em;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    margin-bottom: 10px;
-    position: relative;
-    animation: glow 1.5s infinite alternate;
 }
-
 
 @keyframes glow {
     0% {
@@ -48,9 +42,35 @@ h2 {
     }
 }
 
+/* Carrousel d'images */
+.carousel {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
 
-/* Link Styling */
-a {
+.carousel img {
+    width: 100%;
+    display: none;
+    border-radius: 8px;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+/* Menu de navigation */
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav a {
     font-size: 1.5em;
     color: white;
     text-decoration: none;
@@ -62,10 +82,10 @@ a {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    animation: floating 3s ease-in-out infinite;
 }
 
-
-a::before {
+nav a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -76,37 +96,68 @@ a::before {
     transition: left 0.6s ease;
 }
 
-
-a:hover::before {
+nav a:hover::before {
     left: 100%;
 }
 
-
-a:hover {
+nav a:hover {
     color: red;
     background: rgba(0, 0, 0, 0.3);
     border-color: red;
     transform: scale(1.1);
 }
 
-
-/* Paragraph Styling */
-p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
-    color: rgb(255, 0, 0);
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-
-
-/* Add floating animation to links */
 @keyframes floating {
     0% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
 }
 
+/* Questionnaire de satisfaction */
+#feedback-form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
 
-a {
-    animation: floating 3s ease-in-out infinite;
+#feedback-form input, #feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+#feedback-form textarea {
+    height: 100px;
+}
+
+#feedback-form button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#feedback-form button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: red;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

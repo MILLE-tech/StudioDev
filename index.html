@@ -7,20 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div id="nav-container">
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="Mission 1/index.html">Mission 1</a>
+            <a href="Mission 2/index.html">Mission 2</a>
+            <a href="Mission 3/index.html">Mission 3</a>
+            <a href="TP 1/index.html">TP 1</a>
+            <a href="TP 2/index.html">TP 2</a>
+            <a href="TP 3/index.html">TP 3</a>
+        </nav>
+    </div>
+
     <h1>Caron Arsène</h1>
     <h2>Porte-folio:</h2>
-    <nav>
-        <a href="index.html">Accueil</a>
-        <a href="Mission 1/index.html">Mission 1</a>
-        <a href="Mission 2/index.html">Mission 2</a>
-        <a href="Mission 3/index.html">Mission 3</a>
-        <a href="TP 1/index.html">TP 1</a>
-        <a href="TP 2/index.html">TP 2</a>
-        <a href="TP 3/index.html">TP 3</a>
-    </nav>
-
-    
-    
 
     <!-- Carrousel d'images -->
     <div class="carousel">
@@ -49,7 +55,17 @@
         </form>
     </section>
 
+    <footer>
+        &copy;Arsène Caron. Tous droits réservés.
+    </footer>
+
     <script>
+        // Script pour afficher/masquer le menu hamburger
+        function toggleMenu() {
+            const navContainer = document.getElementById('nav-container');
+            navContainer.classList.toggle('active');
+        }
+
         // Script pour le carrousel
         let currentIndex = 0;
         const images = document.querySelectorAll('.carousel img');
@@ -63,10 +79,4 @@
 
         setInterval(showNextImage, 3000); // Change d'image toutes les 3 secondes
     </script>
-
-    <footer>
-        &copy;Arsène Caron. Tous droits réservés.
-    </footer>
-
 </body>
-</html>

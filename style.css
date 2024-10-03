@@ -1,7 +1,7 @@
 /* Body Styling */
 body {
     background: linear-gradient(135deg, #0d0d0d, #4c4c4c); /* Dégradé élégant */
-    color: white;
+    color: #f1f1f1; /* Couleur uniforme pour le texte */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     padding: 0;
@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin: 0; /* Supprime la marge par défaut */
 }
 
 /* Title Styling */
@@ -24,10 +25,12 @@ h1, h2 {
 
 h1 {
     font-size: 3em;
+    color: white; /* Couleur spécifique pour le titre */
 }
 
 h2 {
     font-size: 2em;
+    color: white; /* Couleur spécifique pour le sous-titre */
 }
 
 @keyframes glow {
@@ -134,8 +137,6 @@ nav a {
     border: 2px solid white;
     border-radius: 25px;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
 }
 
 nav a:hover {
@@ -175,6 +176,11 @@ nav a:hover::before {
     text-align: left; /* Alignement à gauche */
 }
 
+#feedback-form label {
+    display: block; /* Nouvelle ligne pour chaque label */
+    margin: 10px 0 5px; /* Marges pour les labels */
+}
+
 #feedback-form input, #feedback-form textarea {
     width: 100%;
     padding: 12px;
@@ -182,7 +188,7 @@ nav a:hover::before {
     border-radius: 5px;
     border: 1px solid #ccc;
     background: rgba(255, 255, 255, 0.2);
-    color: white;
+    color: #f1f1f1; /* Couleur uniforme pour le texte */
     font-size: 1em; /* Taille de police uniforme */
 }
 

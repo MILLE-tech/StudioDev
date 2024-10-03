@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Caron Arsène</h1>
-    <h2>Porte-folio:</h2>
 
     <div id="nav-container">
         <div class="hamburger-menu" onclick="toggleMenu()">
@@ -26,19 +24,20 @@
             <a href="TP 3/index.html">TP 3</a>
         </nav>
     </div>
-    
-    
+
+    <h1>Caron Arsène</h1>
+    <h2>Porte-folio:</h2>
 
     <!-- Carrousel d'images -->
     <div class="carousel">
-        <img src="image1.jpeg" class="active" alt="Image 1 - Développement web">
-        <img src="imag2.jpeg" alt="Image 2 - Développement web">
-        <img src="image3.jpeg" alt="Image 3 - Développement web">
+        <img src="image1.jpg" class="active" alt="Image 1 - Développement web">
+        <img src="image2.jpg" alt="Image 2 - Développement web">
+        <img src="image3.jpg" alt="Image 3 - Développement web">
     </div>
 
     <!-- Formulaire de satisfaction -->
     <section id="feedback-form">
-        <h2>Donnez moi votre avis sur ce site</h2>
+        <h2>Donnez votre avis</h2>
         <form>
             <label for="first-name">Prénom:</label>
             <input type="text" id="first-name" name="first-name" required>
@@ -65,19 +64,9 @@
         function toggleMenu() {
             const navContainer = document.getElementById('nav-container');
             navContainer.classList.toggle('active');
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        hamburgerMenu.classList.toggle('active');
         }
-
-        // Script pour le carrousel
-        let currentIndex = 0;
-        const images = document.querySelectorAll('.carousel img');
-        const totalImages = images.length;
-
-        function showNextImage() {
-            images[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % totalImages;
-            images[currentIndex].classList.add('active');
-        }
-
-        setInterval(showNextImage, 3000); // Change d'image toutes les 3 secondes
     </script>
 </body>
+</html>

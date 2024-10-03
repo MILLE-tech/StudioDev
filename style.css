@@ -1,8 +1,6 @@
 /* Body Styling */
 body {
-    background: linear-gradient(45deg, black, red);
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #0d0d0d, #4c4c4c); /* Dégradé élégant */
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
@@ -77,6 +75,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.3s ease;
 }
 
 .hamburger-menu div {
@@ -87,6 +86,22 @@ h2 {
     transition: all 0.3s ease-in-out;
 }
 
+.hamburger-menu.active {
+    transform: rotate(45deg); /* Rotation de 45° lors de l'activation */
+}
+
+.hamburger-menu.active div:nth-child(1) {
+    transform: translateY(11px) rotate(90deg); /* Transforme le premier trait en croix */
+}
+
+.hamburger-menu.active div:nth-child(2) {
+    opacity: 0; /* Masque le second trait */
+}
+
+.hamburger-menu.active div:nth-child(3) {
+    transform: translateY(-11px) rotate(90deg); /* Transforme le troisième trait en croix */
+}
+
 /* Navigation menu (hidden by default) */
 nav {
     position: fixed;
@@ -99,30 +114,16 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: right 0.3s ease-in-out;
+    transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Ajout de l'opacity */
+    opacity: 0; /* Invisible par défaut */
 }
 
-/* Show the navigation menu when active */
-#nav-container.active nav {
-    right: 0;
+nav.active {
+    right: 0; /* Menu visible */
+    opacity: 1; /* Affiche le menu avec une transition */
 }
 
-
-/* Navigation menu (hidden by default) */
-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 200px;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: right 0.3s ease-in-out;
-}
-
+/* Style des liens du menu */
 nav a {
     font-size: 1.5em;
     color: white;
@@ -159,22 +160,6 @@ nav a:hover::before {
     left: 100%;
 }
 
-/* Show the navigation menu when active */
-#nav-container.active nav {
-    right: 0;
-}
-
-/* Animation keyframes */
-@keyframes floating {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
-nav a {
-    animation: floating 3s ease-in-out infinite;
-}
-
 /* Questionnaire de satisfaction */
 #feedback-form {
     background-color: rgba(255, 255, 255, 0.1);
@@ -182,21 +167,27 @@ nav a {
     max-width: 600px;
     margin: 30px auto;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Ombre améliorée */
+}
+
+#feedback-form h2 {
+    margin-bottom: 15px;
+    text-align: left; /* Alignement à gauche */
 }
 
 #feedback-form input, #feedback-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border-radius: 5px;
     border: 1px solid #ccc;
     background: rgba(255, 255, 255, 0.2);
     color: white;
+    font-size: 1em; /* Taille de police uniforme */
 }
 
 #feedback-form textarea {
-    height: 100px;
+    height: 120px; /* Hauteur du textarea */
 }
 
 #feedback-form button {

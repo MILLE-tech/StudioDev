@@ -1,0 +1,27 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Couleur de fond */
+    margin: 0; /* Supprimer les marges par défaut */
+    padding: 20px; /* Ajout de padding autour du contenu */
+}
+
+h1 {
+    color: #333; /* Couleur du texte du titre */
+    text-align: center; /* Centrer le titre */
+}
+
+a {
+    color: #007BFF; /* Couleur des liens */
+    text-decoration: none; /* Supprimer le soulignement */
+}
+
+a:hover {
+    text-decoration: underline; /* Souligner les liens au survol */
+}
+
+p {
+    text-align: center; /* Centrer le paragraphe */
+    margin-top: 20px; /* Ajouter un espacement au-dessus du paragraphe */
+}

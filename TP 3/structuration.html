@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structuration - Fierté</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000000 0%, #000000 100%); /* Dégradé pastel */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Ajustement pour ne pas centrer verticalement */
+            height: 100vh; /* Remplir la hauteur de l'écran */
+            color: #333;
+        }
+        header {
+            background-color: #000000; /* Couleur d'arrière-plan */
+            color: white;
+            text-align: center;
+            padding: 15px; /* Réduire le padding */
+            width: 100%; /* Largeur totale */
+            margin-bottom: 15px; /* Espace en dessous */
+        }
+        nav {
+            background-color: #000000; /* Couleur d'arrière-plan */
+            width: 100%; /* Largeur totale */
+            overflow: hidden;
+            text-align: center; /* Centrer les liens */
+            margin-bottom: 15px; /* Espace en dessous */
+        }
+        nav a {
+            display: inline-block; /* Alignement horizontal des liens */
+            color: white;
+            text-align: center;
+            padding: 10px 12px; /* Réduire le padding */
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Transition pour le survol */
+        }
+        nav a:hover {
+            background-color: #ff9f43; /* Jaune au survol */
+            color: black; /* Texte noir au survol */
+        }
+        section {
+            padding: 20px; /* Réduire le padding */
+            margin: 10px; /* Réduire les marges */
+            background-color: rgba(255, 255, 255, 0.9); /* Fond blanc avec transparence */
+            border-radius: 10px; /* Coins arrondis */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
+            max-width: 500px; /* Largeur maximale de la section */
+            text-align: center; /* Centrer le texte dans la section */
+        }
+        footer {
+            background-color: #000000; /* Couleur d'arrière-plan */
+            color: white;
+            text-align: center;
+            padding: 8px; /* Réduire le padding */
+            position: fixed;
+            bottom: 0;
+            width: 97%; /* Largeur presque totale */
+        }
+        .home-button {
+            display: inline-block; /* Assure que le bouton est traité comme un bloc */
+            margin: 15px auto; /* Centrer le bouton */
+            padding: 8px 15px; /* Réduire le padding */
+            background-color: #000000; /* Couleur d'arrière-plan */
+            color: rgb(255, 255, 255); /* Couleur du texte du bouton */
+            text-decoration: none; /* Supprimer le soulignement */
+            border-radius: 5px; /* Coins arrondis pour le bouton */
+            transition: background-color 0.3s ease; /* Transition pour le survol */
+        }
+        .home-button:hover {
+            background-color: #ff0000; /* Rouge au survol */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Page d'accueil bien structurée</h1>
+    </header>
+    <nav>
+        <a href="#home">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section>
+        <h2>À propos de nous</h2>
+        <p>Ceci est un exemple de mise en page d'une page HTML avec des balises de base.</p>
+        <h3>Services</h3>
+        <ul style="list-style-type: none; padding: 0;"> <!-- Supprime les puces -->
+            <li style="background: linear-gradient(90deg, #ff9f43, #ff4757); color: white; padding: 8px; border-radius: 5px; margin: 5px 0;">Conception de sites web</li>
+            <li style="background: linear-gradient(90deg, #ff9f43, #ff4757); color: white; padding: 8px; border-radius: 5px; margin: 5px 0;">Développement d'applications</li>
+            <li style="background: linear-gradient(90deg, #ff9f43, #ff4757); color: white; padding: 8px; border-radius: 5px; margin: 5px 0;">SEO et marketing</li>
+        </ul>
+    </section>
+    <a href="index.html" class="home-button" aria-label="Retour à l'accueil">Retour à l'accueil</a>
+    <footer>
+        &copy;Arsène Caron. Tous droits réservés.
+    </footer>
+</body>
+</html>

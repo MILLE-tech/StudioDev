@@ -1,0 +1,49 @@
+/* Body Styling */
+body {
+    background-color: black; /* Fond noir élégant */
+    color: yellow; /* Texte jaune par défaut */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Hauteur pleine pour centrer verticalement */
+}
+
+/* Table Centering */
+center {
+    width: 100%; /* Largeur du tableau */
+    margin: 0 auto; /* Centrage horizontal */
+}
+
+/* Table Styling */
+table {
+    border-collapse: collapse; /* Fusionne les bordures pour un design épuré */
+    width: 100%; /* Utilise la pleine largeur de la div */
+    background-color: #333; /* Fond gris foncé pour les cellules */
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.8); /* Effet d'ombre lumineuse */
+    border: 3px solid yellow; /* Bordure jaune */
+    border-radius: 10px;
+}
+
+/* Cell Styling */
+td {
+    padding: 15px; /* Réduction du padding pour un look compact */
+    text-align: center;
+    font-size: 1.5em;
+    color: yellow; /* Texte jaune pour toutes les cellules */
+    border: 2px solid yellow; /* Bordure interne pour les cellules */
+}
+
+/* Header Cell Styling */
+td[colspan="2"] {
+    background-color: yellow; /* Fond jaune pour l'en-tête */
+    color: black; /* Texte noir pour l'en-tête */
+    font-weight: bold;
+    font-size: 1.5em;
+    border-radius: 10px 10px 0 0; /* Coins arrondis en haut */
+    padding: 10px; /* Moins d'espace pour réduire l'écart */
+}
+
+/* Altern

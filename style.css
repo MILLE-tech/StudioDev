@@ -1,7 +1,7 @@
 /* Body Styling */
 body {
-    background: linear-gradient(135deg, #0d0d0d, #4c4c4c); /* Dégradé élégant */
-    color: #f1f1f1; /* Couleur uniforme pour le texte */
+    background: linear-gradient(135deg, #0d0d0d, #4c4c4c); /* Dégradé élégant sans barre noire */
+    color: #f1f1f1;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     padding: 0;
@@ -11,6 +11,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     margin: 0;
+    overflow-x: hidden;
 }
 
 /* Title Styling */
@@ -25,12 +26,12 @@ h1, h2 {
 
 h1 {
     font-size: 3em;
-    color: white; /* Couleur spécifique pour le titre */
+    color: white;
 }
 
 h2 {
     font-size: 2em;
-    color: white; /* Couleur spécifique pour le sous-titre */
+    color: white;
 }
 
 @keyframes glow {
@@ -42,26 +43,11 @@ h2 {
     }
 }
 
-/* Carrousel d'images */
-.carousel {
-    width: 80%;
-    max-width: 800px;
-    margin: 20px auto;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.carousel img {
-    width: 100%;
-    border-radius: 8px;
-}
-
 /* Hamburger menu container */
 #nav-container {
     position: absolute;
     top: 20px;
-    right: 20px;
+    left: 20px; /* Placement à gauche */
     z-index: 999;
 }
 
@@ -107,7 +93,7 @@ h2 {
 nav {
     position: fixed;
     top: 0;
-    right: -100%;
+    left: -100%;
     width: 200px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
@@ -115,13 +101,13 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: right 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
     z-index: 1000;
 }
 
 /* When the menu is active (checked), it will appear */
 #toggle:checked ~ nav {
-    right: 0; /* Menu visible */
+    left: 0; /* Le menu apparaît sur la gauche */
 }
 
 /* Style des liens du menu */
@@ -144,6 +130,22 @@ nav a:hover {
     transform: scale(1.1);
 }
 
+/* Add overlay when menu is active */
+#toggle:checked ~ .overlay {
+    display: block;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 900;
+}
+
 /* Questionnaire de satisfaction */
 #feedback-form {
     background-color: rgba(255, 255, 255, 0.1);
@@ -151,7 +153,7 @@ nav a:hover {
     max-width: 600px;
     margin: 30px auto;
     border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Ombre améliorée */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,12 +161,12 @@ nav a:hover {
 
 #feedback-form h2 {
     margin-bottom: 15px;
-    text-align: center; /* Centrer le titre "Donnez votre avis" */
+    text-align: center;
 }
 
 #feedback-form label {
-    display: block; /* Nouvelle ligne pour chaque label */
-    margin: 10px 0 5px; /* Marges pour les labels */
+    display: block;
+    margin: 10px 0 5px;
     text-align: left;
     width: 100%;
 }
@@ -208,4 +210,5 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    margin-top: auto;
 }

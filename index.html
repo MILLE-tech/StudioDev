@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <!-- Navigation -->
     <div id="nav-container">
         <input type="checkbox" id="toggle">
         <label class="hamburger-menu" for="toggle">
@@ -16,7 +15,6 @@
             <div></div>
             <div></div>
         </label>
-        <div class="overlay"></div>
         <nav>
             <a href="index.html">Accueil</a>
             <a href="Mission 1/index.html">Mission 1</a>
@@ -29,36 +27,76 @@
     </div>
 
     <h1>Caron Arsène</h1>
-    <h2>Porte-folio</h2>
+    <h2>Porte-folio:</h2>
 
-    <!-- Carousel -->
+    <!-- Carrousel d'images -->
     <div class="carousel">
-        <img src="image1.jpeg" class="active" alt="Image 1">
-        <img src="image2.jpeg" alt="Image 2">
-        <img src="image3.jpeg" alt="Image 3">
+        <img src="Capture d'écran 2024-10-05 012154.jpg" class="active" alt="Image 1 - Développement web">
+        <img src="Capture d'écran 2024-10-05 013643.png" alt="Image 2 - Développement web">
+        <img src="Capture d'écran 2024-10-05 015207.png" alt="Image 3 - Développement web">
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const carousel = document.querySelector('.carousel');
+            const images = document.querySelectorAll('.carousel img');
+            let currentIndex = 0;
+        
+            // Fonction pour ajuster la hauteur du conteneur
+            function adjustContainerHeight() {
+                const activeImage = images[currentIndex];
+                carousel.style.height = `${activeImage.offsetHeight}px`;
+            }
+        
+            // Fonction pour changer d'image
+            function changeImage() {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+                adjustContainerHeight(); // Ajuster la hauteur après avoir changé d'image
+            }
+        
+            // Initialisation: ajuster la hauteur du conteneur dès le départ
+            adjustContainerHeight();
+        
+            // Changer d'image toutes les 3 secondes
+            setInterval(changeImage, 3000);
+        
+            // Ré-ajuster la hauteur si la fenêtre est redimensionnée
+            window.addEventListener('resize', adjustContainerHeight);
+        });
+    </script>
+        
+        
 
-    <!-- Formulaire professionnel -->
+    <!-- Formulaire de satisfaction -->
     <section id="feedback-form">
         <h2>Donnez votre avis</h2>
         <form>
-            <label for="first-name">Prénom:</label>
-            <input type="text" id="first-name" name="first-name" required>
-
-            <label for="last-name">Nom:</label>
-            <input type="text" id="last-name" name="last-name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="comments">Vos commentaires:</label>
-            <textarea id="comments" name="comments" required></textarea>
-
+            <div class="form-group">
+                <label for="first-name">Prénom:</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="last-name">Nom:</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="comments">Vos commentaires:</label>
+                <textarea id="comments" name="comments" rows="5" required></textarea>
+            </div>
+    
             <button type="submit">Envoyer</button>
         </form>
     </section>
+    
 
-    <!-- Footer -->
     <footer>
         &copy; Tous droits réservés à Arsène Caron.
     </footer>

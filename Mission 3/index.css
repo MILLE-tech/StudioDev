@@ -1,80 +1,107 @@
-/* Styles globaux */
+/* Style global du corps */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial', sans-serif; /* Police de base */
+    background-color: #1a1a1a; /* Couleur de fond sombre */
     margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #000000 0%, #000000 100%); /* Dégradé noir */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* Ne pas centrer verticalement */
-    height: 100vh;
-    color: #fff;
+    padding: 20px;
+    color: #e0e0e0; /* Couleur du texte claire */
 }
 
-/* Styles pour le titre */
+/* Style du titre */
 h1 {
-    background-color: #000000; /* Couleur d'arrière-plan */
-    color: white;
-    text-align: center;
-    padding: 15px; /* Padding pour le titre */
-    width: 100%; /* Largeur totale */
-    margin-bottom: 15px; /* Espace en dessous */
+    font-size: 2.5em; /* Taille du titre */
+    text-align: center; /* Centrer le titre */
+    color: #c4b5d4; /* Couleur lilas clair pour le titre */
+    text-transform: uppercase; /* Texte en majuscules */
+    margin-bottom: 30px; /* Marge en bas */
+    letter-spacing: 2px; /* Espacement des lettres */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Ombre au texte */
 }
 
-/* Liens de la section */
-a {
-    display: inline-block; /* Alignement horizontal des liens */
-    color: white;
-    text-align: center;
-    padding: 10px 12px; /* Réduire le padding */
-    text-decoration: none;
-    background-color: #000000; /* Fond noir */
-    border-radius: 5px; /* Coins arrondis */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transition pour le survol */
-    margin: 10px; /* Espace entre les liens */
-}
-
-a:hover {
-    background-color: #ff9f43; /* Jaune au survol */
-    color: black; /* Texte noir au survol */
-}
-
-/* Conteneur de section */
+/* Style de la section */
 section {
-    padding: 20px; /* Réduire le padding */
-    margin: 10px; /* Réduire les marges */
-    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc avec transparence */
+    background-color: #2a2a2a; /* Couleur de fond sombre pour la section */
+    padding: 40px; /* Espacement interne */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Ombre portée */
+    max-width: 600px; /* Largeur maximale de la section */
+    margin: auto; /* Centrer la section */
+    text-align: center; /* Centrer le contenu */
+}
+
+/* Style du lien des certifications */
+section a:first-of-type {
+    display: inline-block; /* Faire du lien un bloc pour le style */
+    font-size: 1.8em; /* Taille du texte du lien */
+    color: #d4c4d7; /* Couleur gris clair du lien */
+    background-color: #444; /* Fond sombre pour le lien */
+    padding: 15px 25px; /* Espacement interne */
     border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
-    max-width: 500px; /* Largeur maximale de la section */
-    text-align: center; /* Centrer le texte dans la section */
+    margin-bottom: 20px; /* Marge en bas */
+    transition: background-color 0.3s, transform 0.3s; /* Transitions */
+    text-decoration: none; /* Enlever le soulignement */
 }
 
-/* Footer en bas de page */
-footer {
-    background-color: #000000; /* Couleur d'arrière-plan */
-    color: white;
-    text-align: center;
-    padding: 8px; /* Réduire le padding */
-    position: fixed;
-    bottom: 0;
-    width: 100%; /* Largeur totale */
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Ombre légère en haut */
+/* Effet au survol du lien des certifications */
+section a:first-of-type:hover {
+    background-color: #666; /* Couleur au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille */
 }
 
-/* Bouton de retour à la page d'accueil */
+/* Style de la section des certifications */
+#certifications {
+    background-color: #2a2a2a; /* Couleur de fond sombre pour la section des certifications */
+    padding: 20px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombre portée */
+    margin-top: 20px; /* Marge en haut */
+    color: #e0e0e0; /* Couleur du texte */
+}
+
+/* Style des autres liens */
+a {
+    color: #a5a5a5; /* Couleur gris clair des liens */
+    text-decoration: none; /* Enlever le soulignement */
+    font-weight: bold; /* Mettre le texte en gras */
+}
+
+/* Effet au survol des autres liens */
+a:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+/* Style du bouton de retour */
 .home-button {
-    display: inline-block; /* Assure que le bouton est traité comme un bloc */
-    margin: 15px auto; /* Centrer le bouton */
-    padding: 8px 15px; /* Réduire le padding */
-    background-color: #000000; /* Couleur d'arrière-plan */
-    color: white; /* Couleur du texte du bouton */
-    text-decoration: none; /* Supprimer le soulignement */
-    border-radius: 5px; /* Coins arrondis pour le bouton */
-    transition: background-color 0.3s ease; /* Transition pour le survol */
+    background-color: #666; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    padding: 10px 15px; /* Espacement interne du bouton */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s; /* Transition de couleur */
 }
 
+/* Effet au survol du bouton de retour */
 .home-button:hover {
-    background-color: #ff0000; /* Rouge au survol */
+    background-color: #888; /* Couleur au survol */
+}
+
+/* Style du footer */
+footer {
+    text-align: center; /* Centrer le texte du footer */
+    margin-top: 30px; /* Marge en haut */
+    font-size: 0.9em; /* Taille du texte du footer */
+    color: #777; /* Couleur du texte du footer */
+}
+
+/* Animation de fade-in pour la section */
+section {
+    animation: fadeIn 1s ease-in-out; /* Animation au chargement */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Début transparent */
+    }
+    to {
+        opacity: 1; /* Fin opaque */
+    }
 }

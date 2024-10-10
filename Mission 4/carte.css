@@ -1,72 +1,66 @@
-/* Style global */
+/* carte.css */
+/* Auteur: Arsène Caron */
+
+/* Styles généraux pour la page de la carte de visite */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #ecf0f1;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
 }
 
-/* Style de la carte de visite */
 .carte {
-    background-color: #fff;
+    background-color: white;
     padding: 40px;
+    margin: 50px auto;
+    width: 300px;
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 100%;
-    max-width: 400px;
 }
 
-.carte h1 {
-    font-size: 2.5em;
+h1 {
     color: #2c3e50;
-    margin-bottom: 10px;
+    font-size: 24px;
 }
 
-.carte h2 {
-    font-size: 1.5em;
-    color: #34495e;
-    margin-bottom: 20px;
-}
-
-.carte p {
-    font-size: 1.1em;
+h2 {
     color: #7f8c8d;
-    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+p {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin: 20px 0;
 }
 
 .socials a {
-    font-size: 1.2em;
-    color: #2980b9;
+    display: inline-block;
+    margin: 10px;
     text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+    color: #2980b9;
 }
 
 .socials a:hover {
-    color: #1e6b99;
+    color: #3498db;
 }
 
-/* Style responsive */
-@media (max-width: 600px) {
-    .carte {
-        padding: 20px;
-    }
+/* Bouton de retour */
+.retour {
+    text-align: center;
+    margin-top: 20px;
+}
 
-    .carte h1 {
-        font-size: 2em;
-    }
+.btn-retour {
+    text-decoration: none;
+    color: white;
+    background-color: #2980b9;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 
-    .carte h2 {
-        font-size: 1.2em;
-    }
-
-    .carte p {
-        font-size: 1em;
-    }
+.btn-retour:hover {
+    background-color: #3498db;
 }

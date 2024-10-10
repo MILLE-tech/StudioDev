@@ -1,0 +1,42 @@
+/* Style pour la carte de visite */
+.carte {
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 50%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.carte h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+.carte h2 {
+    font-size: 1.5em;
+    color: #555;
+}
+
+.carte p {
+    font-size: 1em;
+    color: #777;
+}
+
+.socials a {
+    margin: 0 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    text-decoration: underline;
+}
+
+/* Rendre responsive */
+@media (max-width: 768px) {
+    .carte {
+        width: 90%;
+    }
+}

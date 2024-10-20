@@ -39,15 +39,42 @@
             bottom: 0;
             width: 100%;
         }
+
+        /* Ajout pour les cercles de traînée */
+        .trail {
+            position: absolute;
+            width: 9px;  /* Points plus petits */
+            height: 9px; /* Points plus petits */
+            border-radius: 90%;
+            pointer-events: none;
+            animation: fadeOut 0.5s forwards;
+            background-color: black; /* Points noirs */
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(2);
+            }
+        }
+
+        /* Empêcher la traînée sur certaines parties */
+        .no-trail {
+            pointer-events: all;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Caron Arsène</h1>
-    <h2>Porte-folio:</h2>
+    <h1 class="no-trail">Caron Arsène</h1>
+    <h2 class="no-trail">Portfolio:</h2>
 
     <!-- Nouvelle navigation circulaire -->
-    <div class="nav-container">
+    <div class="nav-container no-trail">
         <div class="missions">
             <div class="nav-item">
                 <a href="Mission 1/index.html"><img src="m1-logo.jpg" alt="Lien vers Mission 1"></a>
@@ -83,46 +110,57 @@
         </div>
     </div>
     
-    
     <!-- Carrousel d'images -->
-    <div class="carousel">
+    <div class="carousel no-trail">
         <img src="Capture d'écran 2024-10-18 235224.png" class="active" alt="Image 1 - Développement web">
         <img src="Capture d'écran 2024-10-05 013643.png" alt="Image 2 - Développement web">
         <img src="Capture d'écran 2024-10-18 235316.png" alt="Image 3 - Développement web">
     </div>
 
     <script>
+        // Code du carrousel
         document.addEventListener("DOMContentLoaded", function() {
             const carousel = document.querySelector('.carousel');
             const images = document.querySelectorAll('.carousel img');
             let currentIndex = 0;
         
-            // Fonction pour ajuster la hauteur du conteneur
             function adjustContainerHeight() {
                 const activeImage = images[currentIndex];
                 carousel.style.height = `${activeImage.offsetHeight}px`;
             }
-        
-            // Fonction pour changer d'image
+
             function changeImage() {
                 images[currentIndex].classList.remove('active');
                 currentIndex = (currentIndex + 1) % images.length;
                 images[currentIndex].classList.add('active');
-                adjustContainerHeight(); // Ajuster la hauteur après avoir changé d'image
+                adjustContainerHeight();
             }
-        
-            // Initialisation: ajuster la hauteur du conteneur dès le départ
+
             adjustContainerHeight();
-        
-            // Changer d'image toutes les 3 secondes
             setInterval(changeImage, 3000);
-        
-            // Ré-ajuster la hauteur si la fenêtre est redimensionnée
             window.addEventListener('resize', adjustContainerHeight);
+        });
+
+        // Code pour la traînée noire
+        document.addEventListener('mousemove', function(event) {
+        // Empêcher la traînée de se dessiner sur les éléments avec la classe "no-trail"
+        if (event.target.closest('.no-trail')) return;
+
+        const trail = document.createElement('div');
+        trail.classList.add('trail');
+        trail.style.left = event.pageX - 2 + 'px'; // Centrer le point (4px/2)
+         trail.style.top = event.pageY - 2 + 'px'; // Centrer le point (4px/2)
+
+        document.body.appendChild(trail);
+
+        // Délai avant suppression des points (vous pouvez ajuster la durée ici)
+        setTimeout(() => {
+        trail.remove();
+            }, 500); // Délai réduit à 500 ms pour que les points disparaissent plus rapidement
         });
     </script>
 
-    <footer>
+    <footer class="no-trail">
         &copy; Tous droits réservés à Arsène Caron.
     </footer>
 

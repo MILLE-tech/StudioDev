@@ -1,0 +1,86 @@
+/* Fond noir pour la page */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Conteneur pour aligner les sections horizontalement */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Style pour chaque section, taille fixe */
+div.block1, div.block2, div.block3 {
+    width: 30%; /* Taille fixe de chaque bloc */
+    height: 300px; /* Hauteur fixe de chaque bloc */
+    margin: 0 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1); /* Fond légèrement transparent */
+    color: white; /* Texte en blanc pour être visible */
+}
+
+/* Style pour les titres */
+.block1 .title, .block2 .title, .block3 .title {
+    background-color: rgba(255, 255, 255, 0.2); /* Couleur de fond des titres */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px; /* Espace entre le titre et le contenu */
+}
+
+/* Centrer le contenu dans block3 (le bloc avec l'image) */
+.block3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+/* Style pour l'image */
+img {
+    max-width: 100%;
+    max-height: 150px; /* Limite la taille de l'image */
+    margin-top: 10px;
+}
+
+/* Style pour le header et le footer */
+header, footer {
+    background-color: #444; /* Couleur plus claire que le noir */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+/* Police et style pour le header avec "skateboard vibes" */
+header h1 {
+    font-family: 'Rock Salt', cursive; /* Exemple de police pour un style skateboard */
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+/* Import de la police Google pour "skateboard vibes" */
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+/* Style pour le lien de retour au sommet */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

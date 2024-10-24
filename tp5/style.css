@@ -55,7 +55,7 @@ h1 {
 }
 
 .button-container button:hover {
-    background-color: #357ab8; /* Couleur plus sombre au survol */
+    background-color: #265b8a; /* Couleur plus sombre au survol */
     transform: translateY(-2px); /* Effet de levée au survol */
 }
 
@@ -73,4 +73,26 @@ h1 {
 
 .result-container input::placeholder {
     color: #999999; /* Placeholder gris clair */
+}
+
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ffffff; /* Texte blanc */
+    background-color: #4a90e2; /* Fond bleu */
+    border-radius: 8px;
+    text-decoration: none; /* Pas de soulignement */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre légère */
+}
+
+a:hover {
+    background-color: #0d1e2e; /* Fond plus sombre au survol */
+    transform: translateY(-2px); /* Effet de levée au survol */
+}
+
+a:active {
+    background-color: #050d14; /* Couleur plus foncée quand le lien est cliqué */
 }

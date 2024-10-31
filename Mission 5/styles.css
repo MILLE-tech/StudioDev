@@ -1,0 +1,106 @@
+body {
+    background-color: #f8f9fa; /* Couleur de fond douce */
+    margin: 0; /* Suppression des marges par défaut */
+    font-family: 'Arial', sans-serif; /* Police uniforme */
+}
+
+.container {
+    width: 80%; /* Ajustez la largeur pour un meilleur alignement */
+    margin: 40px auto; /* Centre le conteneur */
+    padding: 20px; /* Espacement interne */
+     /* Couleur de bordure noir */
+    border-radius: 20px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    background-color: #ffffff; /* Fond blanc */
+}
+
+
+
+header {
+    background-color: #343a40; /* Fond gris foncé */
+    color: #ffffff; /* Couleur du texte blanc */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 20px; /* Espacement interne */
+    display: flex; /* Flexbox pour aligner les éléments */
+    align-items: center; /* Centrer verticalement */
+    margin-bottom: 20px; /* Marge en bas pour l'espacement */
+}
+
+.infos {
+    flex: 1; /* Prendre l'espace disponible */
+    padding: 10px; /* Espacement interne */
+}
+
+.photo {
+    width: 100px; /* Largeur fixe pour l'image */
+    height: 100px; /* Hauteur fixe pour l'image */
+    border-radius: 50%; /* Faire de l'image un cercle */
+    overflow: hidden; /* Cacher le débordement */
+    border: 3px solid #ffffff; /* Bordure blanche autour de l'image */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
+}
+
+.education, .experience, .skills, .footer {
+    background-color: #e2e3e8; /* Fond gris clair */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 15px; /* Espacement interne */
+    margin-top: 15px; /* Marges supérieures */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
+}
+
+h2 {
+    color: #343a40; /* Couleur de titre gris foncé */
+    margin-bottom: 10px; /* Marge inférieure */
+    font-size: 1.4em; /* Taille de la police du titre */
+    border-bottom: 2px solid #007bff; /* Ligne sous le titre */
+    padding-bottom: 5px; /* Espacement en bas du titre */
+}
+
+.années, .diplome, .poste, .entreprise, .langue, .ci, .activité, .description {
+    background-color: #ffffff; /* Fond blanc */
+    border: 1px solid #ced4da; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px; /* Espacement interne */
+    margin-top: 10px; /* Marge supérieure */
+    line-height: 1.5; /* Hauteur de ligne pour une meilleure lisibilité */
+}
+
+.footer {
+    background-color: #e2e3e8; /* Couleur de fond douce */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 20px; /* Espacement interne */
+    margin-top: 20px; /* Marges supérieures */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    font-family: 'Arial', sans-serif; /* Police uniforme */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+}
+
+.footer h2 {
+    color: #007bff; /* Couleur bleue pour le titre */
+    margin-bottom: 10px; /* Marge inférieure */
+    font-size: 1.5em; /* Taille de la police */
+}
+
+.activité, .description {
+    background-color: #ffffff; /* Fond blanc pour les sous-sections */
+    border: 1px solid #ced4da; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px; /* Espacement interne */
+    margin-top: 10px; /* Marge supérieure */
+}
+
+a {
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    color: #ffc400; /* Couleur du texte en bleu */
+    font-weight: bold; /* Met le texte en gras */
+    font-size: 16px; /* Taille de la police */
+    padding: 10px 15px; /* Ajoute de l'espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: #f8f9fa; /* Fond clair */
+    transition: background-color 0.3s, color 0.3s; /* Ajoute une transition pour un effet au survol */
+}
+
+a:hover {
+    background-color: #ff9100; /* Change le fond en bleu au survol */
+    color: #ffffff; /* Change la couleur du texte en blanc au survol */
+}

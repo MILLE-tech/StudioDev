@@ -38,14 +38,14 @@ function calculate(operation) {
 
 // Fonction pour vérifier si le premier nombre est pair ou impair
 function checkParity() {
-    const num1 = parseFloat(document.getElementById('first-number').value);
+    const result = parseFloat(document.getElementById('result').value);
 
-    if (isNaN(num1)) {
+    if (isNaN(result)) {
         alert('Veuillez entrer un nombre valide dans le premier champ.');
         return;
     }
 
-    const parity = (num1 % 2 === 0) ? 'Pair' : 'Impair';
+    const parity = (result % 2 === 0) ? 'Pair' : 'Impair';
     
     // Afficher le résultat de la parité dans le champ correspondant
     document.getElementById('parity-result').value = parity;

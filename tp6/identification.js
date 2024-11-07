@@ -10,3 +10,6 @@ function login(){
         window.location.href='non.html'
     }
 }
+function reset() {
+    window.location.href = 'identification.html';
+}

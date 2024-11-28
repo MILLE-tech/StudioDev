@@ -44,6 +44,22 @@ h2 {
     }
 }
 
+.qr-code {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+    z-index: 9999;
+    pointer-events: none;
+    border: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    background: none !important;
+    border-radius: 10%;
+}
+
 /* New Circular Navigation Menu Styling */
 .nav-container {
     display: flex;

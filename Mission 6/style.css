@@ -1,0 +1,68 @@
+/* Style pour le fond et le texte */
+body {
+    font-family: 'Arial', sans-serif; /* Police de base */
+    background: linear-gradient(to bottom right, #3a3a3a, #1a1a1a); /* Fond luxueux avec un dégradé sombre */
+    margin: 0;
+    height: 100vh; /* Hauteur de la page */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffd700; /* Couleur or brillant pour le texte */
+}
+
+h1, p {
+    font-size: 2.5em; /* Taille du titre et du paragraphe */
+    margin-bottom: 20px;
+    text-align: center;
+    background: linear-gradient(45deg, #ffd700, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 9s infinite linear;
+    background-size: 400%;
+}
+
+.shiny-text {
+    font-size: 1.2em; /* Taille du paragraphe */
+    text-align: center;
+    background: linear-gradient(45deg, #ffd700, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 9s infinite linear;
+    background-size: 400%;
+}
+
+/* Animation pour le texte brillant */
+@keyframes shine {
+    0% {
+        background-position: -200%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+/* Style pour le spinner (indicateur de chargement) */
+.spinner {
+    border: 8px solid rgb(131, 121, 32); /* Bord clair semi-transparent */
+    border-top: 8px solid #525252; /* Bord supérieur or brillant */
+    border-radius: 50%;
+    width: 100px; /* Taille du spinner */
+    height: 100px; /* Taille du spinner */
+    margin-bottom: 20px; /* Espace entre le spinner et le texte */
+    animation: spin 1.5s linear infinite, glitter 1.5s infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes glitter {
+    0%, 100% { 
+        box-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700, 0 0 50px #ffd700;
+    }
+    50% {
+        box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700;
+    }
+}

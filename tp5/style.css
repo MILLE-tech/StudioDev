@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e1e; /* Fond sombre */
+    color: #ffffff; /* Texte blanc */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 28px;
+    color: #ffffff; /* Titre blanc */
+    margin-bottom: 20px;
+}
+
+.calculator-container {
+    background-color: #2b2b2b; /* Conteneur sombre */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombre prononcée */
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.input-container input {
+    width: 160px; /* Légèrement agrandi pour un meilleur espacement */
+    padding: 12px;
+    margin: 10px;
+    font-size: 16px;
+    border: 2px solid #4a90e2; /* Bordure bleue */
+    background-color: #333; /* Fond sombre */
+    color: #ffffff; /* Texte blanc */
+    border-radius: 8px;
+    outline: none;
+}
+
+.input-container input::placeholder {
+    color: #999999; /* Placeholder gris clair */
+}
+
+.button-container button {
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 18px;
+    background-color: #4a90e2; /* Bleu pour les boutons */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-container button:hover {
+    background-color: #265b8a; /* Couleur plus sombre au survol */
+    transform: translateY(-2px); /* Effet de levée au survol */
+}
+
+.result-container input {
+    width: 160px;
+    padding: 12px;
+    margin: 10px;
+    font-size: 16px;
+    border: 2px solid #4a90e2;
+    background-color: #333;
+    color: #ffffff;
+    border-radius: 8px;
+    outline: none;
+}
+
+.result-container input::placeholder {
+    color: #999999; /* Placeholder gris clair */
+}
+
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ffffff; /* Texte blanc */
+    background-color: #4a90e2; /* Fond bleu */
+    border-radius: 8px;
+    text-decoration: none; /* Pas de soulignement */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre légère */
+}
+
+a:hover {
+    background-color: #0d1e2e; /* Fond plus sombre au survol */
+    transform: translateY(-2px); /* Effet de levée au survol */
+}
+
+a:active {
+    background-color: #050d14; /* Couleur plus foncée quand le lien est cliqué */
+}

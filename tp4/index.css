@@ -1,0 +1,101 @@
+/* Style général */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Fond noir pour le style Thrasher */
+    color: #fff; /* Texte blanc */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Utilise toute la hauteur de la vue */
+}
+
+/* Conteneur principal */
+.container {
+    text-align: center;
+    background-color: #111; /* Fond sombre mais légèrement différent pour démarquer */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+    border: 2px solid #ff6f00; /* Bordure orange style Thrasher */
+    max-width: 400px;
+    width: 90%; /* Largeur responsive */
+    margin-bottom: 20px; /* Espacement sous le conteneur */
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Style du titre avec un effet de feu similaire au logo Thrasher */
+h1 {
+    font-size: 40px;
+    color: #ff6f00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Impact', sans-serif; /* Police forte pour rappeler le logo */
+    margin-bottom: 20px;
+    position: relative;
+    text-shadow: 2px 2px 0 #000, 4px 4px 0 #ff6f00;
+}
+
+/* Style de la navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #ff6f00; /* Couleur principale du logo Thrasher */
+    padding: 10px 30px;
+    border: 2px solid #ff6f00;
+    border-radius: 30px;
+    background-color: #222; /* Bouton sombre avec contour orange */
+    transition: all 0.3s ease;
+    font-family: 'Arial Black', sans-serif; /* Police grasse */
+    display: inline-block;
+}
+
+/* Effet au survol des liens */
+nav ul li a:hover {
+    background-color: #ff6f00;
+    color: #000;
+    border-color: #fff;
+    transform: scale(1.1); /* Lien légèrement agrandi au survol */
+}
+
+/* Style pour le lien de retour à l'accueil */
+a {
+    text-decoration: none;
+    color: #ff6f00; /* Couleur orange */
+    margin-top: 20px; /* Espacement au-dessus du lien */
+    font-size: 18px; /* Taille de police */
+}
+
+/* Effet au survol du lien de retour */
+a:hover {
+    text-decoration: underline; /* Sous-ligne au survol */
+}
+
+/* Style du footer */
+footer {
+    margin-top: 20px; /* Pour espacer un peu le footer */
+    background-color: #222; /* Fond sombre pour le footer */
+    color: #ff6f00; /* Texte orange */
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* Style pour le texte du footer */
+footer p {
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice en ligne</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculatrice en ligne</h1>
+    <div class="calculator-container">
+        <div class="input-container">
+            <input type="number" id="first-number" placeholder="Premier chiffre">
+            <input type="number" id="second-number" placeholder="Deuxième chiffre">
+        </div>
+        <div class="button-container">
+            <button onclick="calculate('+')">+</button>
+            <button onclick="calculate('-')">-</button>
+            <button onclick="calculate('*')">×</button>
+            <button onclick="calculate('/')">÷</button>
+            <button onclick="checkParity()">Parité</button>
+            <button onclick="swapNumbers()">Permuter</button>
+        </div>
+        <div class="result-container">
+            <input type="text" id="result" placeholder="Résultat" readonly>
+            <input type="text" id="parity-result" placeholder="Pair / Impair" readonly>
+        </div>
+    </div><br>
+    <a href="../index.html">Retour au sommaire</a>
+    <script src="index.js"></script>
+</body>
+</html>

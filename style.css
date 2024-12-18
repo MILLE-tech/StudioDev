@@ -1,0 +1,214 @@
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #0d0d0d, #4c4c4c); /* Dégradé élégant */
+    color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Title Styling */
+h1, h2 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 3em;
+    color: white;
+    animation: glow 1.5s infinite alternate;
+}
+
+h2 {
+    font-size: 2em;
+    color: white;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgb(54, 54, 54), 0 0 20px rgb(44, 44, 44), 0 0 30px rgb(34, 34, 34), 0 0 40px rgb(24, 24, 24);
+    }
+    100% {
+        text-shadow: 0 0 20px rgb(97, 97, 97), 0 0 30px rgb(85, 85, 85), 0 0 40px rgb(44, 44, 44), 0 0 50px rgb(27, 27, 27);
+    }
+}
+
+.qr-code {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+    z-index: 9999;
+    pointer-events: none;
+    border: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    background: none !important;
+    border-radius: 10%;
+}
+
+/* New Circular Navigation Menu Styling */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px;
+}
+
+.nav-item {
+    width: 100px;
+    height: 97px;
+    border-radius: 70%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 3px solid #336900;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: #4d0d5a;
+    transform: scale(1.1);
+}
+
+.nav-item img {
+    width: 102%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.nav-item a {
+    position: static; /* Pour tester */
+    text-indent: 0; /* Pour tester */
+}
+
+.separator {
+    width: 1.5px; /* Largeur de la barre */
+    background-color: #366600; /* Couleur de la barre */
+    margin: 0 20px; /* Espace autour de la barre */
+    height: auto; /* Hauteur automatique pour s'adapter au contenu */
+}
+
+/* Image Carousel Styling */
+.carousel {
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    position: relative;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    transition: height 1s ease-in-out; /* Transition fluide sur la hauteur du conteneur */
+}
+
+/* Les images prennent toute la largeur du conteneur */
+.carousel img {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Image active */
+.carousel img.active {
+    opacity: 1;
+    position: relative;
+}
+
+/* Form Styling */
+#feedback-form {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#feedback-form h2 {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 90%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #868686;
+    outline: none;
+    box-shadow: 0 0 5px rgba(116, 116, 116, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2em;
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

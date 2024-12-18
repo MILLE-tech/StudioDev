@@ -1,0 +1,69 @@
+/* Importer les polices depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* Styles généraux pour le corps */
+body {
+    background-color: grey; /* Couleur de fond */
+    font-family: 'Montserrat', sans-serif; /* Utiliser Montserrat pour le corps */
+}
+
+/* Styles des titres */
+h1 {
+    font-family: 'Playfair Display', serif; /* Police stylisée pour le titre */
+    font-size: 3em; /* Taille du titre */
+    color: #fff; /* Couleur du texte du titre */
+    margin-bottom: 20px; /* Espacement en dessous du titre */
+    text-align: center; /* Centre le titre */
+}
+
+/* Styles des boutons */
+button {
+    width: 250px; /* Largeur des boutons */
+    height: 120px; /* Hauteur des boutons */
+    background-color: black; /* Couleur de fond des boutons */
+    color: white; /* Couleur du texte */
+    border: 2px solid white; /* Bordure blanche */
+    border-radius: 26px; /* Bordures arrondies */
+    font-size: 2em; /* Taille de la police */
+    margin: 15px; /* Espacement autour des boutons */
+    transition: 0.3s; /* Transition fluide pour les effets */
+    cursor: pointer; /* Curseur pointer au survol */
+    font-family: 'Playfair Display', serif; /* Utiliser Playfair Display pour les boutons */
+}
+
+button:hover {
+    background-color: white; /* Fond blanc au survol */
+    color: black; /* Texte noir au survol */
+    border: 2px solid black; /* Bordure noire au survol */
+}
+
+/* Style du lien "Retour au sommaire" */
+a {
+    display: inline-block; /* Affiche le lien comme un bloc en ligne */
+    text-decoration: none; /* Pas de soulignement */
+    color: #111; /* Couleur principale (noir) */
+    font-weight: 700; /* Gras */
+    text-transform: uppercase; /* Majuscules */
+    letter-spacing: 1px; /* Espacement des lettres */
+    padding: 10px 20px; /* Espacement à l'intérieur du lien */
+    border: 2px solid #111; /* Bordure noire */
+    border-radius: 50px; /* Bordures arrondies */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Animation au survol */
+    font-size: 14px; /* Taille de la police */
+    margin-top: 20px; /* Espacement au-dessus du lien */
+}
+
+a:hover {
+    background-color: #111; /* Couleur de fond au survol */
+    color: #fff; /* Couleur du texte au survol */
+    transform: translateY(-3px); /* Lien se soulève légèrement */
+}
+
+a:active {
+    transform: translateY(0); /* Retour à la normale lors du clic */
+}
+
+a:before {
+    content: '\2190'; /* Symbole de flèche vers la gauche (←) */
+    margin-right: 8px; /* Espacement à droite de la flèche */
+}

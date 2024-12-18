@@ -1,0 +1,107 @@
+/* Style global du corps */
+body {
+    font-family: 'Arial', sans-serif; /* Police de base */
+    background-color: #1a1a1a; /* Couleur de fond sombre */
+    margin: 0;
+    padding: 20px;
+    color: #e0e0e0; /* Couleur du texte claire */
+}
+
+/* Style du titre */
+h1 {
+    font-size: 2.5em; /* Taille du titre */
+    text-align: center; /* Centrer le titre */
+    color: #c4b5d4; /* Couleur lilas clair pour le titre */
+    text-transform: uppercase; /* Texte en majuscules */
+    margin-bottom: 30px; /* Marge en bas */
+    letter-spacing: 2px; /* Espacement des lettres */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Ombre au texte */
+}
+
+/* Style de la section */
+section {
+    background-color: #2a2a2a; /* Couleur de fond sombre pour la section */
+    padding: 40px; /* Espacement interne */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Ombre portée */
+    max-width: 600px; /* Largeur maximale de la section */
+    margin: auto; /* Centrer la section */
+    text-align: center; /* Centrer le contenu */
+}
+
+/* Style du lien des certifications */
+section a:first-of-type {
+    display: inline-block; /* Faire du lien un bloc pour le style */
+    font-size: 1.8em; /* Taille du texte du lien */
+    color: #d4c4d7; /* Couleur gris clair du lien */
+    background-color: #444; /* Fond sombre pour le lien */
+    padding: 15px 25px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    margin-bottom: 20px; /* Marge en bas */
+    transition: background-color 0.3s, transform 0.3s; /* Transitions */
+    text-decoration: none; /* Enlever le soulignement */
+}
+
+/* Effet au survol du lien des certifications */
+section a:first-of-type:hover {
+    background-color: #666; /* Couleur au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille */
+}
+
+/* Style de la section des certifications */
+#certifications {
+    background-color: #2a2a2a; /* Couleur de fond sombre pour la section des certifications */
+    padding: 20px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombre portée */
+    margin-top: 20px; /* Marge en haut */
+    color: #e0e0e0; /* Couleur du texte */
+}
+
+/* Style des autres liens */
+a {
+    color: #a5a5a5; /* Couleur gris clair des liens */
+    text-decoration: none; /* Enlever le soulignement */
+    font-weight: bold; /* Mettre le texte en gras */
+}
+
+/* Effet au survol des autres liens */
+a:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+/* Style du bouton de retour */
+.home-button {
+    background-color: #666; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    padding: 10px 15px; /* Espacement interne du bouton */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s; /* Transition de couleur */
+}
+
+/* Effet au survol du bouton de retour */
+.home-button:hover {
+    background-color: #888; /* Couleur au survol */
+}
+
+/* Style du footer */
+footer {
+    text-align: center; /* Centrer le texte du footer */
+    margin-top: 30px; /* Marge en haut */
+    font-size: 0.9em; /* Taille du texte du footer */
+    color: #777; /* Couleur du texte du footer */
+}
+
+/* Animation de fade-in pour la section */
+section {
+    animation: fadeIn 1s ease-in-out; /* Animation au chargement */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Début transparent */
+    }
+    to {
+        opacity: 1; /* Fin opaque */
+    }
+}

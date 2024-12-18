@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Fanta</title>
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fe8100; /* Orange vif de Fanta */
+            color: #000000; /* Couleur du texte */
+            text-align: center;
+            overflow: hidden; /* Masquer les bulles lorsqu'elles sortent de l'écran */
+            position: relative;
+        }
+
+        h1 {
+            margin-top: 10px; /* Réduit l'espace au-dessus du titre */
+            font-size: 2.5em; /* Réduit la taille de la police du titre */
+            color: #ffdf2a; /* Jaune pour le titre */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        form {
+            margin: 20px auto; /* Réduit la marge autour du formulaire */
+            padding: 15px; /* Réduit le rembourrage */
+            max-width: 400px; /* Réduit la largeur maximale */
+            background-color: #ffffff; /* Fond blanc pour le formulaire */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2; /* Mettre le formulaire devant les bulles */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px; /* Réduit l'espace en dessous des labels */
+            font-size: 1em; /* Réduit la taille des labels */
+            color: #FF6A00; /* Orange pour les labels */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 90%;
+            padding: 8px; /* Réduit le rembourrage des champs de saisie */
+            margin-bottom: 10px; /* Réduit l'espace en dessous des champs de saisie */
+            border: 2px solid #FF6A00; /* Bordure orange */
+            border-radius: 5px;
+            font-size: 0.9em; /* Réduit la taille de la police */
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            background-color: #fe8100; /* Jaune pour le bouton */
+            color: #050505;
+            padding: 8px 15px; /* Réduit le rembourrage du bouton */
+            border: none;
+            border-radius: 5px;
+            font-size: 1em; /* Réduit la taille de la police du bouton */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #080808; /* Couleur au survol */
+            color: #fe8100;
+        }
+
+        .home-button {
+            display: inline-block;
+            margin-top: 15px; /* Réduit l'espace au-dessus du bouton d'accueil */
+            padding: 8px 15px; /* Réduit le rembourrage */
+            background-color: #FF6A00; /* Orange pour le bouton d'accueil */
+            color: rgb(22, 12, 0);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #E65900; /* Couleur au survol */
+        }
+
+        /* Animation des bulles */
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: rise 10s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes rise {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Générer des bulles dynamiques */
+        .bubble:nth-child(1) {
+            left: 5%;
+            width: 30px; /* Réduit la taille des bulles */
+            height: 30px;
+            animation-duration: 10s;
+            animation-delay: 0s;
+        }
+
+        .bubble:nth-child(2) {
+            left: 20%;
+            width: 20px; /* Réduit la taille des bulles */
+            height: 20px;
+            animation-duration: 8s;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(3) {
+            left: 40%;
+            width: 40px; /* Réduit la taille des bulles */
+            height: 40px;
+            animation-duration: 12s;
+            animation-delay: 4s;
+        }
+
+        .bubble:nth-child(4) {
+            left: 60%;
+            width: 25px; /* Réduit la taille des bulles */
+            height: 25px;
+            animation-duration: 9s;
+            animation-delay: 1s;
+        }
+
+        .bubble:nth-child(5) {
+            left: 80%;
+            width: 15px; /* Réduit la taille des bulles */
+            height: 15px;
+            animation-duration: 11s;
+            animation-delay: 3s;
+        }
+        footer img {
+            width: 14%;
+            height : 2%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulaire de Fanta</h1>
+
+    <form action="/submit_form" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required><br>
+
+        <label for="email">E-mail :</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="3" cols="30" required></textarea><br>
+
+        <div class="btn-container">
+            <input type="submit" value="Envoyer">
+        </div>
+    </form>
+
+    <a href="index.html" class="home-button">Retour à l'accueil</a>
+
+    <!-- Conteneur pour les bulles -->
+    <div id="bubbles-container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <script>
+        // Fonction pour générer plusieurs bulles
+        function generateBubbles(numBubbles) {
+            const container = document.getElementById('bubbles-container');
+            for (let i = 0; i < numBubbles; i++) {
+                let bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+
+                // Définir des tailles aléatoires pour les bulles
+                let size = Math.random() * 20 + 10; // Entre 10px et 30px
+                bubble.style.width = size + 'px';
+                bubble.style.height = size + 'px';
+
+                // Position aléatoire sur l'écran
+                bubble.style.left = Math.random() * 100 + '%';
+
+                // Durée d'animation aléatoire
+                bubble.style.animationDuration = Math.random() * 5 + 5 + 's'; // Entre 5s et 10s
+                bubble.style.animationDelay = Math.random() * 5 + 's'; // Entre 0s et 5s
+
+                container.appendChild(bubble);
+            }
+        }
+
+        // Générer 50 bulles
+        generateBubbles(50);
+    </script>
+    <footer>
+       <img src="Fanta-Brand-Banner (1).jpg">
+    </footer>
+    <footer>
+        &copy;Arsène Caron. Tous droits réservés.
+    </footer>
+</body>
+</html>

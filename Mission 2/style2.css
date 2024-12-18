@@ -1,0 +1,60 @@
+/* Body Styling */
+body {
+    background-color: black; /* Fond noir pour un contraste fort */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 93vh; /* Pour occuper toute la hauteur de l'écran */
+}
+
+/* Title Styling */
+h1 {
+    font-size: 4em; /* Augmenter la taille du titre */
+    color: yellow; /* Titre en jaune pour un bon contraste */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    border-bottom: 4px solid yellow; /* Épaissir la bordure */
+    padding-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Video Frame Styling */
+iframe {
+    border: 4px solid yellow; /* Épaissir la bordure jaune */
+    border-radius: 25px; /* Bord arrondis plus doux */
+    box-shadow: 0 0 30px yellow; /* Renforcer l'ombre lumineuse */
+    width: 90%; /* Utilisation de presque toute la largeur de l'écran */
+    height: calc(100vh - 10px); /* Ajustement dynamique de la hauteur selon la taille de l'écran */
+    max-width: 1200px; /* Limitation de la largeur pour les écrans plus grands */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+iframe:hover {
+    transform: scale(1.05); /* Légère mise en avant au hover */
+    box-shadow: 0 0 40px yellow; /* Augmenter l'effet de lumière */
+}
+
+/* Paragraph Styling */
+p {
+    margin-top: 30px;
+    font-size: 1.2em;
+    color: yellow; /* Texte en jaune pour correspondre au thème */
+}

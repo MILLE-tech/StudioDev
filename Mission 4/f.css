@@ -1,0 +1,92 @@
+/* formulaire.css */
+/* Auteur: Arsène Caron */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0b0b;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #f1c40f;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 3em;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    background-color: #1a1a1a;
+    padding: 40px;
+    margin: 60px auto;
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 20px;
+    color: #bdc3c7;
+}
+
+input, button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background-color: #2c2c2c;
+    color: #f5f5f5;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+input::placeholder {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+button {
+    background-color: #f1c40f;
+    color: #121212;
+    font-size: 1.3em;
+    border: none;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #d4ac0d;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Bouton de retour */
+.retour {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-retour {
+    text-decoration: none;
+    color: #121212;
+    background-color: #f1c40f;
+    padding: 15px 40px;
+    border-radius: 50px;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.btn-retour:hover {
+    background-color: #d4ac0d;
+    color: #ffffff;
+    transform: scale(1.05);
+}

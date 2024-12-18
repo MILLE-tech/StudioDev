@@ -1,0 +1,101 @@
+/* Body Styling */
+body {
+    background: linear-gradient(45deg, black, navy);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 3.5em;
+    color: cyan; /* Changement de la couleur du titre */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: glow-cyan 1.5s infinite alternate;
+    text-align: center;
+}
+
+@keyframes glow-cyan {
+    0% {
+        text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan;
+    }
+    100% {
+        text-shadow: 0 0 20px lightcyan, 0 0 30px lightcyan, 0 0 40px lightcyan, 0 0 50px lightcyan;
+    }
+}
+
+/* Iframe Styling */
+iframe {
+    border: 3px solid white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.8);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    margin: 20px;
+}
+
+iframe:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 40px rgba(173, 216, 230, 1);
+}
+
+/* Link Styling */
+a {
+    font-size: 1.5em;
+    color: yellow; /* Changement de la couleur des liens */
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid yellow; /* Changement de la bordure */
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+a:hover::before {
+    left: 100%;
+}
+
+a:hover {
+    color: cyan; /* Couleur du lien sur hover */
+    background: rgba(0, 0, 0, 0.3);
+    border-color: cyan; /* Bordure du lien sur hover */
+    transform: scale(1.1);
+}
+
+/* Floating animation for link */
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+a {
+    animation: floating 3s ease-in-out infinite;
+}
+
+/* Paragraph Styling */
+p {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.5em;
+    color: cyan; /* Changement de couleur du texte */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}

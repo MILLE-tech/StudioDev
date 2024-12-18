@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Coca-Cola avec Bulles</title>
+    <style>
+        /* Style général du body */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            text-align: center;
+            background-color: rgb(229, 35, 46);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animation des bulles */
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: bubbleRise linear infinite;
+        }
+
+        @keyframes bubbleRise {
+            0% {
+                transform: translateY(0);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Bandeau Coca-Cola */
+        header {
+            background-color: #000;
+            padding: 10px 0;
+            position: relative;
+        }
+        footer img {
+            width: 1500px;
+            height : 300px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: white;
+            margin: 50px 0;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Style des liens */
+        a {
+            display: inline-block;
+            margin: 15px;
+            padding: 10px 25px;
+            background-color: white;
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            background-color: rgb(255, 72, 72);
+            color: white;
+            transform: scale(1.1); /* Agrandir légèrement au survol */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bandeau Coca-Cola -->
+    
+
+    <h1>Bienvenue chez Coca-Cola</h1>
+
+    <nav>
+        <a href="formulaire.html">Formulaire</a>
+        <a href="structuration.html">Page de structuration</a><br>
+        <a href="../index.html">Retour au sommaire</a>
+    </nav>
+    <br><br><br>
+    <footer>
+        <img src="coca-cola-distribution-France.jpg">
+    </footer>
+    <br><br><br>
+    <footer>
+        &copy;Arsène Caron. Tous droits réservés.
+    </footer>
+
+    <!-- Container pour les bulles -->
+    <div id="bubbles-container"></div>
+
+    <script>
+        // Générer 100 bulles dynamiquement
+        for (let i = 0; i < 100; i++) {
+            // Créer un élément bulle
+            let bubble = document.createElement('div');
+            bubble.classList.add('bubble');
+
+            // Tailles aléatoires des bulles
+            let size = Math.random() * 40 + 10; // Taille entre 10px et 50px
+            bubble.style.width = size + 'px';
+            bubble.style.height = size + 'px';
+
+            // Position aléatoire sur l'écran (gauche)
+            bubble.style.left = Math.random() * 100 + '%';
+
+            // Durée d'animation aléatoire pour chaque bulle
+            bubble.style.animationDuration = Math.random() * 5 + 3 + 's'; // Entre 3s et 8s
+
+            // Délai d'animation aléatoire pour créer des variations dans le timing
+            bubble.style.animationDelay = Math.random() * 5 + 's'; // Entre 0s et 5s
+
+            // Ajouter la bulle dans le conteneur
+            document.getElementById('bubbles-container').appendChild(bubble);
+        }
+    </script>
+
+</body>
+</html>

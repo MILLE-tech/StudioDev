@@ -1,0 +1,77 @@
+/* Body Styling */
+body {
+    background-color: black; /* Fond noir épuré */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 4em;
+    color: yellow; /* Couleur jaune pour le titre */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid yellow;
+    padding-bottom: 15px;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Link Styling */
+a {
+    font-size: 1.8em;
+    color: yellow; /* Couleur du texte des liens */
+    text-decoration: none;
+    padding: 15px 30px;
+    margin-top: 30px;
+    background-color: transparent;
+    border: 2px solid yellow; /* Bordure jaune */
+    border-radius: 50px; /* Bords arrondis pour un effet doux */
+    transition: all 0.4s ease;
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+    position: relative;
+}
+
+a:hover {
+    color: black; /* Le texte devient noir au survol */
+    background-color: yellow; /* Le fond devient jaune */
+    border-color: yellow; /* Bordure jaune persistante */
+    transform: scale(1.05); /* Augmentation de la taille légère au survol */
+    box-shadow: 0 0 20px yellow; /* Effet lumineux au survol */
+}
+
+/* Animation pour les liens */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px yellow;
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 20px yellow;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px yellow;
+    }
+}
+
+a {
+    animation: pulse 2.5s infinite; /* Animation douce de pulsation pour les liens */
+}

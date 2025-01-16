@@ -44,6 +44,26 @@ h2 {
     }
 }
 
+/* Positionner l'image en haut à droite avec des coins arrondis */
+.top-right {
+    position: absolute;
+    top: 10px; /* Ajustez l'espace en haut si nécessaire */
+    right: 10px; /* Ajustez l'espace à droite si nécessaire */
+}
+
+.php-image {
+    width: 250px; /* Taille de l'image */
+    height: auto;
+    border-radius: 50%; /* Coins arrondis pour une forme circulaire */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optionnel : ajout d'une ombre */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.php-image:hover {
+    transform: scale(1.1); /* Zoom léger au survol */
+}
+
+
 .qr-code {
     position: fixed;
     top: 10px;

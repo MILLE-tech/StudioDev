@@ -110,6 +110,45 @@ h2 {
     text-align: center; /* Centre le texte sous le QR code */
 }
 
+.mid_right {
+    position: absolute; /* Permet un positionnement précis */
+    top: 50%; /* Place l'élément verticalement au milieu */
+    right: 0; /* Aligne l'élément à droite */
+    transform: translateY(-50%); /* Centrage vertical */
+    padding: 10px;
+}
+
+.lkd-image {
+    max-width: 120px; /* Taille réduite de l'image */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Facultatif : ombre pour un effet visuel */
+    border: 1px solid #000000; /* Facultatif : bordure discrète */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.lkd-image:hover {
+    transform: scale(1.1); /* Zoom léger au survol */
+}
+
+.mid_left {
+    position: absolute; /* Permet un positionnement précis */
+    top: 50%; /* Place l'élément verticalement au milieu */
+    left: 0; /* Aligne l'élément à gauche */
+    transform: translateY(-50%); /* Centrage vertical */
+    padding: 10px;
+}
+
+.cv-image {
+    max-width: 120px; /* Taille réduite de l'image */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Facultatif : ombre pour un effet visuel */
+    border: 1px solid #000000; /* Facultatif : bordure discrète */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.cv-image:hover {
+    transform: scale(1.1); /* Zoom léger au survol */
+}
 
 /* New Circular Navigation Menu Styling */
 .nav-container {

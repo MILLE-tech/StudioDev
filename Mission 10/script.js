@@ -93,5 +93,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.getElementById("retour").addEventListener("click", function() {
-    window.location.href = "/index.html";  // Remplacez "index.html" par l'URL de votre page d'accueil
+    window.location.href = window.location.origin;  // Cela vous redirige vers la racine du site
 });

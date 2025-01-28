@@ -93,5 +93,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.getElementById("retour").addEventListener("click", function() {
-    window.location.href = window.location.origin;  // Cela vous redirige vers la racine du site
+    window.history.back();  // Cela vous ramène à la page précédente dans l'historique
 });

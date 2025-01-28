@@ -91,3 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("sous-total-remise-wrapper").style.display = "none";
     });
 });
+
+document.getElementById("retour").addEventListener("click", function() {
+    window.location.href = "/index.html";  // Remplacez "index.html" par l'URL de votre page d'accueil
+});

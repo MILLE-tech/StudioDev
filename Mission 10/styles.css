@@ -1,0 +1,173 @@
+/* Styles globaux */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eef2f3;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(90deg, #1D976C, #93F9B9);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+main {
+    margin: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section h2 {
+    color: #1D976C;
+    border-bottom: 3px solid #1D976C;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    border: none;
+    padding: 15px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+table th {
+    background-color: #1D976C;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #e7f7ed;
+    transition: background-color 0.3s;
+}
+
+/* Boutons */
+button {
+    background-color: #1D976C;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+    margin: 5px 5px 15px 0;
+}
+
+button:hover {
+    background-color: #93F9B9;
+    transform: translateY(-2px);
+}
+
+button.supprimer-ligne {
+    background-color: transparent;
+    color: #e74c3c;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+button.supprimer-ligne:hover {
+    color: #c0392b;
+}
+
+/* Résultats */
+.resultats {
+    text-align: right;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resultats p {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #1D976C;
+}
+
+/* Formulaires */
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+form input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #1D976C;
+    box-shadow: 0 0 0 3px rgba(29, 151, 108, 0.2);
+}
+
+/* Boutons principaux */
+#ajouter-ligne, #remplir-auto, #calculer, #reset {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* Assurez que le tableau reste lisible */
+tr.ligne-modele td {
+    vertical-align: middle;
+}
+
+/* Ajout d'une animation subtile */
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

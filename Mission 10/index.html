@@ -3,14 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page en création</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Facturation Amazon</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Page en cours de création</h1>
-        <p>Cette page est en construction. Revenez plus tard pour plus d'informations.</p>
-        <a href="../index.html" class="back-link">Retour à l'accueil</a>
-    </div>
+    <header>
+        <h1>Facturation - GSB</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Facture</h2>
+            <table id="facture">
+                <thead>
+                    <tr>
+                        <th>❌</th>
+                        <th>Description</th>
+                        <th>Quantité</th>
+                        <th>Prix Unitaire</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="ligne-modele">
+                        <td><button class="supprimer-ligne">❌</button></td>
+                        <td><input type="text" class="desc" placeholder="Description"></td>
+                        <td><input type="number" class="qte" min="1" value="1"></td>
+                        <td><input type="number" class="prix" min="0" step="0.01" value="0.00"></td>
+                        <td class="total">0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="ajouter-ligne">Ajouter une ligne</button>
+            <button id="remplir-auto">Remplir automatiquement</button>
+            <button id="calculer">Calculer</button>
+            <button id="reset">Annuler tout</button>
+        </section>
+
+        <section>
+            <h2>Résultats</h2>
+            <form id="formulaire">
+                <label for="remise">Remise (%):</label>
+                <input type="number" id="remise" min="0" max="100" value="0">
+
+                <label for="taxe">Taux d'imposition (%):</label>
+                <input type="number" id="taxe" min="0" max="100" value="20">
+
+                <label for="frais">Frais d'expédition (€):</label>
+                <input type="number" id="frais" min="0" step="0.01" value="5.00" readonly>
+
+                <div class="resultats">
+                    <p id="sous-total-remise-wrapper" style="display: none;"><strong>Sous-Total (après remise):</strong> <span id="sous-total-remise">0.00</span> €</p>
+                    <p><strong>Sous-Total:</strong> <span id="sous-total">0.00</span> €</p>
+                    <p><strong>Taxe Totale:</strong> <span id="taxe-total">0.00</span> €</p>
+                    <p><strong>Solde Final:</strong> <span id="solde">0.00</span> €</p>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

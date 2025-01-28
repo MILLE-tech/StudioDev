@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background-rl.jpg'); /* Ajoute ici le chemin de ton image */
+    background-size: cover; /* L'image couvre toute la page */
+    background-position: center; /* L'image est centrée */
+    background-attachment: fixed; /* L'image reste fixe lors du défilement */
+    color: #ffffff; /* Texte blanc */
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.897); /* Fond sombre semi-transparent pour contraster avec l'image */
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.question {
+    margin-bottom: 15px;
+}
+
+.question p {
+    font-size: 1.2rem;
+}
+
+label {
+    display: inline-block;
+    font-size: 1rem;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.return-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.return-btn:hover {
+    background-color: #218838;
+}
